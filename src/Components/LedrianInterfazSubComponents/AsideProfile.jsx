@@ -23,7 +23,7 @@ export const AsideProfile = () => {
         <button>
         <img src="/public/tabs_icon.png" alt="" width={20} height={20} />
             Create</button>
-        <button>
+        <button onClick={() => navigate("/settings")}>
         <img src="/public/setting_icon.png" alt="" width={20} height={20} />
             Settings</button>
         <button>

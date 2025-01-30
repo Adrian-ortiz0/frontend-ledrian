@@ -6,6 +6,7 @@ import { LedrianInterfaz } from './Components/LedrianInterfaz';
 import { Profile } from './Components/Profile';
 import { ProfileEdit } from './Components/PorfileComponents/ProfileEdit';
 import { Friends } from './Components/Friends';
+import { Settings } from './Components/Settings';
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/edit" element={<ProfileEdit />} />
         <Route path="/friends" element={<Friends />} />
+        <Route path='/settings' element={<Settings/>} />
       </Routes>
     </Router>
   )
