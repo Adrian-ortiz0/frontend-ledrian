@@ -45,13 +45,13 @@ export const CreateModal = ({ onClose }) => {
             )}
           </div>
           <textarea
-            className='caption-textarea'
+            id='caption-textarea' // ID para el textarea
             placeholder='Write a caption...'
             value={caption}
             onChange={(e) => setCaption(e.target.value)}
           />
           <button
-            className='publish-button' 
+            id='publish-button' // ID para el botón
             type='submit'
             disabled={!image}
           >
