@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const SettingsFeed = () => {
+export const SettingsFeed = ({usuario}) => {
   return (
     <div className='settings_feed-container'>
         <h1>Settings</h1>
