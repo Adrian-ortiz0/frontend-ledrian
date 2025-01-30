@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router";
 import { Login } from './Components/Login';
 import { SignIn } from './Components/SignIn';
 import { LedrianInterfaz } from './Components/LedrianInterfaz';
+import { Profile } from './Components/Profile';
+import { ProfileEdit } from './Components/PorfileComponents/ProfileEdit';
 
 export const App = () => {
   return (
@@ -12,6 +14,8 @@ export const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<LedrianInterfaz />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/edit" element={<ProfileEdit />} />
       </Routes>
     </Router>
   )

@@ -297,7 +297,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #171616;
 }
@@ -350,4 +350,173 @@
   color: white;
   align-items: center;
   justify-content: center;
+}
+
+/* Profile */
+
+.profile_container{
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  
+}
+
+.profile{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #030303;
+  overflow-y: auto;
+}
+
+.profile_banner_container{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  background-color: #222020;
+  flex-direction: column;
+
+}
+
+.profile_banner{
+  width: 90%;
+  height: 60%;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff18;
+
+}
+
+.profile_info {
+  width: 90%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222020;
+}
+
+.profile_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.profile_img label{
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.301);
+}
+
+.profile_img button {
+  background-color: transparent;
+  border: none;
+  border-radius: 7px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.profile_img button:hover {
+  background-color: #645e5ecc;
+}
+
+.profile_bio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  width: 40%;
+
+}
+
+.buttons_bio{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.buttons_bio button{
+  background-color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons_bio button:hover{
+  background-color: #ffffffcc;
+}
+
+.follows_bio{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.819);
+}
+
+.profile_nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: #0d0d0d;
+
+}
+
+.profile_nav button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100px;
+  height: 100%;
+}
+
+.profile_nav button:hover{
+  background-color: #ffffff18;
+}
+
+.profile_posts{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  place-content: center;
+  place-items: center;
 }
