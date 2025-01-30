@@ -48,7 +48,7 @@ export const AsideProfile = ({ usuario }) => {
       </div>
 
       {isCreateModalOpen && (
-        <CreateModal onClose={handleCloseModal} />
+        <CreateModal onClose={handleCloseModal} usuario={usuario} />
       )}
     </aside>
   );

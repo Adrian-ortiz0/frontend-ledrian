@@ -371,12 +371,12 @@
   flex-direction: column;
   align-items: center;
   background-color: #030303;
-  overflow-y: auto;
+  overflow-y:auto;
 }
 
 .profile_banner_container{
   width: 100%;
-  height: 70%;
+  height: 50vh;
   display: flex;
   align-items: center;
   background-color: #222020;
@@ -385,10 +385,8 @@
 }
 
 .profile_banner{
-  width: 90%;
-  height: 60%;
-  margin-top: 20px;
-  border-radius: 10px;
+  width: 100%;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -398,8 +396,8 @@
 }
 
 .profile_info {
-  width: 90%;
-  height: 30%;
+  width: 100%;
+  height: 30vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -447,7 +445,6 @@
   gap: 20px;
   height: 100%;
   width: 40%;
-
 }
 
 .buttons_bio{
@@ -487,12 +484,17 @@
   color: rgba(255, 255, 255, 0.819);
 }
 
+.bio{
+  color: rgb(255, 255, 255);
+}
+
 .profile_nav{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 10%;
+  height: 20vh;
+  border: 1px solid red;
   background-color: #0d0d0d;
 
 }
@@ -513,14 +515,34 @@
 
 .profile_posts{
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-height: 40vh;
   width: 90%;
-  height: auto;
   padding: 20px;
-  place-content: center;
+  margin-top: 20px;
   place-items: center;
 }
+
+.profile::-webkit-scrollbar {
+  width: 8px;
+}
+
+.profile::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 5px;
+}
+
+.profile::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.profile::-webkit-scrollbar-thumb:hover {
+  background: #777; 
+}
+
 
 /* Profile editing */
 
@@ -668,6 +690,25 @@
   align-items: center;
   background-color: #030303;
   overflow-y: auto;
+}
+
+.friends_feed::-webkit-scrollbar {
+  width: 8px;
+}
+
+.friends_feed::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 5px;
+}
+
+.friends_feed::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.friends_feed::-webkit-scrollbar-thumb:hover {
+  background: #777; 
 }
 
 .friends_feed-container{

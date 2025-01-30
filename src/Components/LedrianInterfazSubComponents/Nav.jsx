@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 import { CreateModal } from '../CreateModal'
 
-export const Nav = () => {
+export const Nav = ({usuario}) => {
 
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
 
@@ -28,7 +28,7 @@ export const Nav = () => {
             <img src="/public/notification_icon.png" alt="" width={20} height={20}/>
         </button>
         {isCreateModalOpen && (
-            <CreateModal onClose={handleCloseModal} />
+            <CreateModal onClose={handleCloseModal} usuario={usuario} />
         )}
     </nav>
   )

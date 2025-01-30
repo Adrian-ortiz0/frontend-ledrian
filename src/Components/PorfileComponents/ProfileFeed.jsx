@@ -7,7 +7,6 @@ export const ProfileFeed = ({usuario}) => {
   return (
     <div className='profile'>
         <ProfileBanner usuario={usuario} />
-        <ProfileNav usuario={usuario} />
         <ProfilePosts usuario={usuario} />
     </div>
   )

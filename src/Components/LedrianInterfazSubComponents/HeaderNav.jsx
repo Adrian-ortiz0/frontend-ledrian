@@ -7,7 +7,7 @@ export const HeaderNav = ({usuario}) => {
   return (
     <header className='header_nav-container'>
         <SearchInput />
-        <Nav />
+        <Nav usuario={usuario} />
         <NavProfile usuario={usuario} />
     </header>
   )

@@ -1,21 +1,53 @@
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
+import { useUser } from "../UserContext";
+import AxiosConfiguration from '../AxiosConfiguration';
 
-export const CreateModal = ({ onClose }) => {
+export const CreateModal = ({ onClose, usuario }) => {
   const [image, setImage] = useState(null);
-  const [caption, setCaption] = useState('');
+  const [description, setDescription] = useState('');
+  const [formData, setFormData] = useState({
+    description: "",
+    photo: '',
+    username: usuario.username,
+    date: new Date().toISOString(),
+  });
 
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setImage(URL.createObjectURL(e.target.files[0]));
+      const file = e.target.files[0];
+      setImage(URL.createObjectURL(file));
+
+      setFormData({
+        ...formData,
+        photo: file, 
+      });
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Publicación creada:', { image, caption });
-    onClose();
+
+    const data = new FormData();
+    data.append('description', description);
+    data.append('photo', formData.photo); 
+    data.append('username', formData.username);
+    data.append('date', formData.date);
+
+    AxiosConfiguration.post('publications/upload', data, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        'Authorization': `Bearer ${localStorage.getItem('authToken')}` 
+      },
+    })
+      .then((response) => {
+        console.log('Publicación creada:', response.data);
+        onClose();
+      })
+      .catch((error) => {
+        console.error('Error al crear la publicación:', error);
+      });
   };
 
   return (
@@ -45,13 +77,13 @@ export const CreateModal = ({ onClose }) => {
             )}
           </div>
           <textarea
-            id='caption-textarea' // ID para el textarea
+            id='caption-textarea'
             placeholder='Write a caption...'
-            value={caption}
-            onChange={(e) => setCaption(e.target.value)}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           />
           <button
-            id='publish-button' // ID para el botón
+            id='publish-button'
             type='submit'
             disabled={!image}
           >
