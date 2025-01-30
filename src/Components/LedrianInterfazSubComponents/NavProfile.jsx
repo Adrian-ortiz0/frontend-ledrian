@@ -26,7 +26,7 @@ export const NavProfile = ({ usuario }) => {
 
   return (
     <div className='nav_profile-container'>
-      <img src={usuario.photo} alt="profile icon" width={30} height={30} />
+      <img src={usuario.photo} alt="profile icon" width={40} height={40} />
       <button>
         {usuario.username}
         <IconButton onClick={handleClick} aria-controls='profile-menu' aria-haspopup='true'>
