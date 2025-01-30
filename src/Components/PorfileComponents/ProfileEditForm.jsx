@@ -1,11 +1,11 @@
 import React from "react";
 
-export const ProfileEditForm = () => {
+export const ProfileEditForm = ({usuario}) => {
   return (
     <div className="profile_edit_form-container">
       <div className="profile_edit_form-photo">
         <img
-          src="/public/profile_icon.png"
+          src={usuario.photo}
           alt="profile"
           width={100}
           height={100}
@@ -19,26 +19,26 @@ export const ProfileEditForm = () => {
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" value={usuario.name} />
             </div>
             <div className="form-group">
               <label htmlFor="last_name">Last name:</label>
-              <input type="text" placeholder="Last name" />
+              <input type="text" placeholder="Last name" value={usuario.lastname} />
             </div>
           </div>
 
             <div className="form-row">
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
-                    <input type="email" placeholder="Email" />
+                    <input type="email" placeholder="Email" value={usuario.email}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="phone">Username:</label>
-                    <input type="tel" placeholder="Phone" />
+                    <input type="tel" placeholder="Phone" value={usuario.username} />
                 </div>
             </div>
                 <textarea name="bio" id="" className="edit_bio">
-                    Bio:
+                    Bio: 
                 </textarea>
           <button>Save</button>
           

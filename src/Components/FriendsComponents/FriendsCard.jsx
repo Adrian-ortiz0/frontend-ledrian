@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const FriendsCard = () => {
+export const FriendsCard = ({usuario}) => {
+
+  const [following, setfollowing] = useState([])
+
+  
+
   return (
     <div className="friends_card">
         <img src="/public/profile_icon.png" alt="" width={30} height={30} />

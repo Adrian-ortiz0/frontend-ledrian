@@ -51,8 +51,8 @@ export const Login = () => {
             <div className="backdrop-blur-lg bg-white/10 p-8 rounded-2xl shadow-lg max-w-sm w-full text-white relative z-10">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
                 <form className="flex flex-col space-y-4 gap-4 pt-6" onSubmit={handleSubmit}>
-                    <input onChange={handleChange} name='email' type="text" placeholder="email" className="px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/50" />
-                    <input onChange={handleChange} name='password' type="password" placeholder="password" className="px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/50" />
+                    <input onChange={handleChange} name='email' type="text" placeholder="email" className="px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/50" required />
+                    <input onChange={handleChange} name='password' type="password" placeholder="password" className="px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/50" required />
                     <button type='submit' className="bg-white-mt-8/30 hover:bg-white/40 transition p-2 rounded-lg font-semibold">Login</button>
                 </form>
                 <p className="text-center mt-6">

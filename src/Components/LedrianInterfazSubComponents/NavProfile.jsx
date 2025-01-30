@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { use } from 'react';
 import { useNavigate } from 'react-router';
 
-export const NavProfile = () => {
+export const NavProfile = ({usuario}) => {
 
   const navigate = useNavigate();
 
@@ -20,9 +20,9 @@ export const NavProfile = () => {
 
   return (
     <div className='nav_profile-container'>
-      <img src="/public/profile_icon.png" alt="profile icon" width={20} height={20}/>
+      <img src={usuario.photo} alt="profile icon" width={30} height={30}/>
       <button>
-        Adrian Ortiz
+        {usuario.username}
         <IconButton onClick={handleClick} aria-controls='profile-menu' aria-haspopup='true'>
           <MoreVertIcon />
         </IconButton>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-export const ProfileBanner = () => {
+export const ProfileBanner = ({usuario}) => {
 
 const navigate = useNavigate();
 
@@ -12,15 +12,15 @@ const navigate = useNavigate();
         <div className="profile_img">
           <button>
             <img
-              src="/public/profile_icon.png"
+              src={usuario.photo}
               alt=""
               width={100}
               height={100}
             />
           </button>
           <div>
-            <h1>Adrian Ortiz</h1>
-            <label htmlFor="">@adrian_flac</label>
+            <h1>{usuario.name} {usuario.lastname}</h1>
+            <label htmlFor="">{usuario.username}</label>
           </div>
         </div>
         <div className="profile_bio">
@@ -29,9 +29,9 @@ const navigate = useNavigate();
             <button>Add Post</button>
           </div>
           <div className="follows_bio">
-            <p>0 posts</p>
-            <p>386 followers</p>
-            <p>810 following</p>
+            <p>{usuario.publications.length} posts</p>
+            <p>{usuario.followers.length} followers</p>
+            <p>{usuario.following.length} following</p>
           </div>
         </div>
       </div>

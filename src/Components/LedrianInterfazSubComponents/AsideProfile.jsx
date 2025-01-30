@@ -1,16 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-export const AsideProfile = () => {
+export const AsideProfile = ({usuario}) => {
 
   const navigate = useNavigate();
 
   return (
     <aside className="aside_profile-container">
       <div className="aside_profile-options">
-        <button onClick={() => navigate("/profile")}>
-          <img src="/public/profile_icon.png" alt="" width={20} height={20} />
-          Adrian Ortiz
+        <button onClick={() => navigate("../profile")}>
+          <img src={usuario.photo} alt="" width={30} height={30} />
+          {usuario.name} {usuario.lastname}
         </button>
         <button onClick={() => navigate("/home")}>
           <img src="/public/home_icon.png" alt="" width={20} height={20} />

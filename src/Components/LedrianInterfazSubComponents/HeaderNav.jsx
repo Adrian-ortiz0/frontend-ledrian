@@ -3,12 +3,12 @@ import { SearchInput } from './SearchInput'
 import { Nav } from './Nav'
 import { NavProfile } from './NavProfile'
 
-export const HeaderNav = () => {
+export const HeaderNav = ({usuario}) => {
   return (
     <header className='header_nav-container'>
         <SearchInput />
         <Nav />
-        <NavProfile />
+        <NavProfile usuario={usuario} />
     </header>
   )
 }

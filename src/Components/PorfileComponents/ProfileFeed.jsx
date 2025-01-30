@@ -3,12 +3,12 @@ import { ProfileBanner } from './ProfileBanner'
 import { ProfileNav } from './ProfileNav'
 import { ProfilePosts } from './ProfilePosts'
 
-export const ProfileFeed = () => {
+export const ProfileFeed = ({usuario}) => {
   return (
     <div className='profile'>
-        <ProfileBanner />
-        <ProfileNav />
-        <ProfilePosts />
+        <ProfileBanner usuario={usuario} />
+        <ProfileNav usuario={usuario} />
+        <ProfilePosts usuario={usuario} />
     </div>
   )
 }
