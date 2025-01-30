@@ -5,6 +5,7 @@ export const Feed = () => {
   return (
     <main className='feed-container'>
         <FeedCreate />
+        
     </main>
   )
 }
