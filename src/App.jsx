@@ -5,6 +5,7 @@ import { SignIn } from './Components/SignIn';
 import { LedrianInterfaz } from './Components/LedrianInterfaz';
 import { Profile } from './Components/Profile';
 import { ProfileEdit } from './Components/PorfileComponents/ProfileEdit';
+import { Friends } from './Components/Friends';
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
         <Route path="/home" element={<LedrianInterfaz />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/edit" element={<ProfileEdit />} />
+        <Route path="/friends" element={<Friends />} />
       </Routes>
     </Router>
   )

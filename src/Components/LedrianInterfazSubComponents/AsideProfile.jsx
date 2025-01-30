@@ -16,7 +16,7 @@ export const AsideProfile = () => {
           <img src="/public/home_icon.png" alt="" width={20} height={20} />
           Home
         </button>
-        <button>
+        <button onClick={() => navigate("/friends")}>
           <img src="/public/friends_icon.png" alt="" width={20} height={20} />
           Friends
         </button>
